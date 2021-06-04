@@ -1,0 +1,2 @@
+# workstation
+Generic workstation bootsrapper
