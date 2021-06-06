@@ -6,3 +6,6 @@ binaries:
 
 handler_list:
 - restart ntp
+
+# DATETIME
+timezone: "Australia/Melbourne"

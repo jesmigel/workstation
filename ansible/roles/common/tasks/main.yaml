@@ -4,3 +4,6 @@
 
 - name: Install Binaries
   import_tasks: install.yaml
+
+- name: Initialise NTP configuration
+  import_tasks: datetime.yaml
