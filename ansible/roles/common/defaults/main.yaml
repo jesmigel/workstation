@@ -3,6 +3,7 @@ binaries:
 - software-properties-common
 - curl
 - ntp
+- make
 
 handler_list:
 - restart ntp
