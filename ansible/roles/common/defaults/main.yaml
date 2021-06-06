@@ -4,6 +4,8 @@ binaries:
 - curl
 - ntp
 - make
+- python3-venv
+- gcc
 
 handler_list:
 - restart ntp

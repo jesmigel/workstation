@@ -1,0 +1,7 @@
+---
+- name: Clone git repositories
+  ansible.builtin.git:
+    repo: "{{ item.url }}"
+    dest: "{{ global_project_path }}{{ item.dst }}"
+    update: yes
+  loop: "{{ git_list }}"

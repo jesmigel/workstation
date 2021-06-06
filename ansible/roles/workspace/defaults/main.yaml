@@ -1,0 +1,17 @@
+global_project_path: /home/vagrant/
+
+global_files:
+- src_file: Makefile
+  dst_name: Makefile
+  owner: vagrant
+  group: vagrant
+
+git_list:
+  - url: https://github.com/jesmigel/homelab.git
+    dst: homelab
+  - url: https://github.com/jesmigel/infrastructure.git
+    dst: infrastructure
+  - url: https://github.com/jesmigel/diagrams.git
+    dst: diagrams
+  - url: https://github.com/jesmigel/workstation.git
+    dst: workstation

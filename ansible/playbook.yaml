@@ -4,3 +4,4 @@
     - { role: common, become: yes }
     - { role: docker, become: yes }
     - { role: hashicorp, become: yes }
+    - { role: workspace }

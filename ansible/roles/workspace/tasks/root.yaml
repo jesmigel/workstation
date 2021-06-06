@@ -1,0 +1,9 @@
+---
+# Create Makefile
+- name: Create Global files in project root folder
+  ansible.builtin.copy:
+    src: "{{ item.src_file }}"
+    dest: "{{ global_project_path }}{{ item.dst_name }}"
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+  loop: "{{ global_files }}"

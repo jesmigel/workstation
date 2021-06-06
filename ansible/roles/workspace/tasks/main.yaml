@@ -1,0 +1,6 @@
+---
+- name: Prepare Workspace root directory
+  import_tasks: root.yaml
+
+- name: Pull git repositories
+  import_tasks: projects.yaml
