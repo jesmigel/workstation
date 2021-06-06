@@ -1,9 +1,7 @@
 Vagrant.configure('2') do |config|
     # INPUT PAYLOAD
     payload_file=File.expand_path('./env.yaml')
-    puts "# PAYLOAD: #{payload_file}"
     payload=YAML.load_file(payload_file)['esxi']
-    puts payload
 
     # OS image
     config.vm.box = payload['vm']['box']
