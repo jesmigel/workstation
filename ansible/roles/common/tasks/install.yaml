@@ -1,0 +1,9 @@
+---
+- name: Install binaries
+  apt: 
+    pkg: "{{ item }}"
+    state: latest
+  loop: "{{  binaries }}"
+  notify: "{{ handler_list }}"
+  tags:
+  - apt_install

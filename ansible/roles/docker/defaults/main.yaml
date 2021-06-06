@@ -1,0 +1,13 @@
+docker_binaries:
+- docker
+- docker-compose
+
+docker_group: docker
+
+docker_users:
+- user_id: vagrant
+  user_shell: /bin/bash
+
+docker_handler_list:
+- restart docker
+- version docker-compose

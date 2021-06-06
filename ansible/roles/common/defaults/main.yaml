@@ -1,0 +1,8 @@
+binaries:
+- gnupg
+- software-properties-common
+- curl
+- ntp
+
+handler_list:
+- restart ntp

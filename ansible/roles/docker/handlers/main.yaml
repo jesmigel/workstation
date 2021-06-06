@@ -1,0 +1,8 @@
+---
+- name: restart docker
+  service: 
+    name: docker
+    state: restarted
+
+- name: version docker-compose
+  shell: /usr/bin/docker-compose --version

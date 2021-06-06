@@ -1,0 +1,19 @@
+---
+- name: Run apt update task from common role
+  include_role:
+    name: common
+    tasks_from: update.yaml
+    apply:
+      tags:
+        - apt_update
+
+- name: Install hashicorp binaries
+  include_role:
+    name: common
+    tasks_from: install.yaml
+    apply:
+      tags:
+        - apt_install
+  vars:
+    binaries: "{{ hashicorp_binaries }}"
+    handler_list: []

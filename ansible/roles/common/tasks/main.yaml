@@ -1,0 +1,6 @@
+---
+- name: Update apt cache
+  import_tasks: update.yaml
+
+- name: Install Binaries
+  import_tasks: install.yaml
