@@ -23,6 +23,10 @@ status:
 up:
 	$(call venv_exec,.venv,$(_VM) up)
 
+venv_init:
+	$(call venv_exec,.venv,pip install -r requirements.txt)
+	$(call venv_exec,.venv,pip install --upgrade pip)
+
 # VENV FUNCTIONS
 define venv_exec
 	$(if [ ! -f "$($(1)/bin/activate)" ], python3 -m venv $(1))
