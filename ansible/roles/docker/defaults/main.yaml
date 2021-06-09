@@ -11,3 +11,8 @@ docker_users:
 docker_handler_list:
 - restart docker
 - version docker-compose
+
+
+docker_url_gpg_key: https://download.docker.com/linux/ubuntu/gpg
+docker_file_gpg_key: /usr/share/keyrings/docker-archive-keyring.gpg
+docker_apt_repo: https://download.docker.com/linux/ubuntu
