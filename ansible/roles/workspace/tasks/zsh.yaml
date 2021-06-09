@@ -1,0 +1,11 @@
+---
+- name: Append zsh shell to list of users
+  ansible.builtin.user:
+    name: "{{ item.user_id }}"
+    shell: "{{ item.user_shell }}"
+  loop: "{{  workspace_users  }}"
+  become: yes
+
+- name: Install ZSH theme
+  ansible.builtin.shell:
+    cmd: curl -fsSL "{{ workspace_url_zsh }}" | bash -

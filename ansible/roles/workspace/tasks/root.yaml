@@ -1,9 +1,16 @@
 ---
-# Create Makefile
+- name: Create Projects directory if it doesnt exist
+  ansible.builtin.file:
+    path: "{{ project_path }}"
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0775'
+
 - name: Create Global files in project root folder
   ansible.builtin.copy:
     src: "{{ item.src_file }}"
-    dest: "{{ global_project_path }}{{ item.dst_name }}"
+    dest: "{{ project_path }}{{ item.dst_name }}"
     owner: "{{ item.owner }}"
     group: "{{ item.group }}"
   loop: "{{ global_files }}"

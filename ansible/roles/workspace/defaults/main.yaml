@@ -1,8 +1,13 @@
 global_project_path: /home/vagrant/
+project_path: /home/vagrant/projects/
 
 global_files:
 - src_file: Makefile
   dst_name: Makefile
+  owner: vagrant
+  group: vagrant
+- src_file: VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle
+  dst_name: VMware-ovftool-4.4.1-16812187-lin.x86_64.bundle
   owner: vagrant
   group: vagrant
 
@@ -15,3 +20,9 @@ git_list:
     dst: diagrams
   - url: https://github.com/jesmigel/workstation.git
     dst: workstation
+
+workspace_users:
+- user_id: vagrant
+  user_shell: /usr/bin/zsh
+
+workspace_url_zsh: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh

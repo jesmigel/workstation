@@ -4,3 +4,6 @@
 
 - name: Pull git repositories
   import_tasks: projects.yaml
+
+- name: Update user shell
+  import_tasks: zsh.yaml
