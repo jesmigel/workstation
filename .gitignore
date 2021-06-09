@@ -34,3 +34,6 @@ env.yaml
 
 # Virtualenv
 .venv
+
+# VMWare OVF bundle
+*.bundle
