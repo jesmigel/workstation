@@ -8,11 +8,12 @@
     url: "{{ hashicorp_url_gpg_key }}"
     state: present
 
-- name: Add the official HashiCorp Linux repository.
-  ansible.builtin.apt_repository:
-    repo: "{{ hashicorp_apt_repo }}"
-    state: present
-
 # - name: Add the official HashiCorp Linux repository.
 #   ansible.builtin.shell:
 #     cmd: apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+- name: Add the official HashiCorp Linux repository.
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64] {{ hashicorp_apt_repo }} {{ ansible_facts.distribution_release }} main"
+    state: present
+    
