@@ -6,6 +6,7 @@ binaries:
 - make
 - python3-venv
 - gcc
+- zsh
 
 handler_list:
 - restart ntp
