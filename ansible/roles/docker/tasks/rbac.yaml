@@ -6,3 +6,6 @@
     groups: "{{ docker_group }}"
     append: yes
   loop: "{{  docker_users  }}"
+
+- name: reset ssh connection to refresh group
+  meta: reset_connection
