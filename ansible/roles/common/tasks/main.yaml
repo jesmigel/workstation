@@ -1,6 +1,6 @@
 ---
 - name: Update and Install Binaries
-  import_tasks: install.yaml
+  import_tasks: apt.yaml
 
 - name: Initialise NTP configuration
   import_tasks: datetime.yaml
