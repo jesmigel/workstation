@@ -1,8 +1,5 @@
 ---
-- name: Update apt cache
-  import_tasks: update.yaml
-
-- name: Install Binaries
+- name: Update and Install Binaries
   import_tasks: install.yaml
 
 - name: Initialise NTP configuration
