@@ -1,8 +1,9 @@
 ---
-- name: restart docker
+- name: start docker
   service: 
     name: docker
-    state: restarted
+    state: started
+    enabled: yes
 
 - name: version docker-compose
   shell: /usr/bin/docker-compose --version
