@@ -1,9 +1,10 @@
 .PHONY: up down clean status config login provision
 
-_VM=vagrant
+_VM=time vagrant
 
 clean:
 	$(call venv_exec,.venv,$(_VM) destroy)
+	rm -rf .vagrant
 
 config:
 	$(call venv_exec,.venv,$(_VM) validate)
