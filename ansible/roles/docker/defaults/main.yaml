@@ -9,7 +9,7 @@ docker_users:
   user_shell: /bin/bash
 
 docker_handler_list:
-- restart docker
+- start docker
 - version docker-compose
 
 
