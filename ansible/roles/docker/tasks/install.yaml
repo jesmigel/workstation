@@ -1,16 +1,8 @@
 ---
-- name: Run apt update task from common role
-  include_role:
-    name: common
-    tasks_from: update.yaml
-    apply:
-      tags:
-        - apt_update
-
 - name: Install Docker binaries
   include_role:
     name: common
-    tasks_from: install.yaml
+    tasks_from: apt.yaml
     apply:
       tags:
         - apt_install
