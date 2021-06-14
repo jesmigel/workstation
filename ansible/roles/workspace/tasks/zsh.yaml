@@ -9,3 +9,10 @@
 - name: Install ZSH theme
   ansible.builtin.shell:
     cmd: curl -fsSL "{{ workspace_url_zsh }}" | bash -
+  ignore_errors: true
+  register: cmd_out
+    
+- name: The $ZSH folder already exists ($HOME/.oh-my-zsh)
+  debug: 
+    msg: "Return code is 1"
+  when: cmd_out.rc == 1
