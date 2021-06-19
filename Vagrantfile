@@ -3,6 +3,7 @@ Vagrant.configure('2') do |config|
     payload_file=File.expand_path('./env.yaml')
     payload=YAML.load_file(payload_file)['esxi']
 
+    config.vm.hostname = "workstation"
     # OS image
     config.vm.box = payload['vm']['box']
 
@@ -61,13 +62,10 @@ Vagrant.configure('2') do |config|
       #esxi.clone_from_vm = 'resource_pool/source_vm'
   
       #  OPTIONAL.  Guest VM name to use.
-      #    The Default will be automatically generated.  It will be based on
-      #    the guest_name_prefix (see below), your hostname & username and path.
-      #    Otherwise you can set a fixed guest VM name here.
-      #esxi.guest_name = 'Custom-Guest-VM_Name'
+      esxi.guest_name = payload['vm']['guest_name']
   
       #  OPTIONAL.  When automatically naming VMs, use this prefix.
-      #esxi.guest_name_prefix = 'V-'
+      esxi.guest_name_prefix = payload['vm']['guest_name_prefix']
   
       #  OPTIONAL.  Set the guest username login.  The default is 'vagrant'.
       #esxi.guest_username = 'vagrant'
